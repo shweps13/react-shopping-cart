@@ -1,7 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 class Product extends React.Component {
   
+	constructor() {
+		super();
+		this.state = {
+			products: []
+		};
+	  }
+
+	  
+
 render(props) {
 	
 	return (
@@ -19,7 +28,7 @@ render(props) {
 			<button onClick={() => this.props.addItem(this.props.product)}>
 				Add to localStorage
 			</button>
-
+			{console.log(this.props.product)}
 		</div>
 	);
 };
